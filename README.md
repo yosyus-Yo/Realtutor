@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RealTutor - AI 기반 실시간 튜터링 시스템
 
-## Getting Started
+Google AI Studio의 Stream Realtime 기술을 기반으로 한 개인화된 실시간 AI 튜터링 시스템입니다. 맞춤형 학습 경험을 통해 사용자의 교육 효과를 극대화합니다.
 
-First, run the development server:
+## 주요 기능
+
+- **실시간 AI 튜터링**: Gemini 1.5 Pro/Flash 모델을 활용한 고품질 실시간 튜터링
+- **개인화된 학습 경로**: 사용자 수준에 맞춘 적응형 학습 경험 제공
+- **멀티모달 상호작용**: 텍스트, 음성, 이미지 등 다양한 형태의 입력 처리
+- **학습 분석 및 피드백**: 학습 성과 추적 및 맞춤형 피드백 제공
+
+## 시작하기
+
+### 요구사항
+
+- Node.js 18.0.0 이상
+- npm 또는 yarn
+
+### 설치
+
+```bash
+# 저장소 클론
+git clone https://github.com/yourusername/realtutor.git
+cd realtutor
+
+# 의존성 설치
+npm install
+# 또는
+yarn install
+```
+
+### 개발 서버 실행
 
 ```bash
 npm run dev
-# or
+# 또는
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+이후 브라우저에서 [http://localhost:3000](http://localhost:3000)으로 접속하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 프로젝트 구조
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+realtutor/
+├── src/
+│   ├── app/                 # Next.js 애플리케이션 페이지
+│   │   ├── dashboard/       # 학습 대시보드
+│   │   ├── session/         # 학습 세션 관련 페이지
+│   │   └── profile/         # 사용자 프로필 관리
+│   ├── components/          # 재사용 가능한 컴포넌트
+│   │   ├── common/          # 공통 UI 컴포넌트
+│   │   └── tutoring/        # 튜터링 관련 컴포넌트
+│   ├── lib/                 # 유틸리티 및 헬퍼 함수
+│   │   ├── api/             # API 호출 관련 함수
+│   │   ├── hooks/           # 커스텀 React 훅
+│   │   └── utils/           # 유틸리티 함수
+│   ├── styles/              # 글로벌 스타일 및 테마
+│   └── types/               # TypeScript 타입 정의
+├── public/                  # 정적 파일
+└── ...
+```
 
-## Learn More
+## 기술 스택
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: React 18, Next.js 14, Tailwind CSS
+- **Backend**: Firebase, Node.js (예정)
+- **AI/ML**: Gemini 1.5 Pro/Flash
+- **데이터베이스**: Firebase Firestore (예정)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 구현 로드맵
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Phase 1 (현재)**
+   - 기본 UI/UX 구현
+   - 인증 및 사용자 관리
+   - 기본 세션 관리
 
-## Deploy on Vercel
+2. **Phase 2**
+   - Gemini API 통합
+   - 실시간 튜터링 기능
+   - 기본 학습 분석
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Phase 3**
+   - 고급 멀티모달 기능
+   - 확장된 학습 도메인
+   - 고급 학습 분석 및 추천
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 라이선스
+
+MIT
+
+---
+
+© 2025 RealTutor
